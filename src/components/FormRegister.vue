@@ -1,7 +1,7 @@
 <template>
   <div class="form-register">
     <h3 class="mt-1">Entramos em contato com você!</h3>
-    <span class="close" @click="closeRegister()">x</span>
+    <span class="close-form" @click="closeRegister()">x</span>
     <h6>Você já conhece nosso sistema ?</h6>
     <b-form @submit="onSubmit">
       <b-form-group
@@ -47,6 +47,9 @@
           required
         ></b-form-input>
       </b-form-group>
+      <b-modal id="modal-confirmacao" title="Contato realizado com sucesso!">
+        <p class="my-4">Obrigado <strong>{{ form.name }}</strong>! Entraremos em contato com você em breve!</p>
+      </b-modal>
 
       <Button class="mt-2" tag="Registrar" @click="onSubmit = $event"></Button>
     </b-form>
@@ -75,7 +78,9 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      alert(JSON.stringify(this.form));
+      JSON.stringify(this.form)
+      this.closeRegister();
+      this.$bvModal.show("modal-confirmacao")
     },
     closeRegister() {
       this.$emit("callForm", 0);
@@ -83,6 +88,13 @@ export default {
   },
 };
 </script>
+
+<style>
+#modal-confirmacao button.close{
+  border: none;
+  background: white;
+}
+</style>
 
 <style scoped>
 .form-register {
@@ -103,7 +115,7 @@ export default {
   font-weight: 500;
 }
 
-.close {
+.close-form {
   position: absolute;
   top: 5px;
   right: 10px;
@@ -111,7 +123,7 @@ export default {
   cursor: pointer;
 }
 
-.close:hover {
+.close-form:hover {
   font-weight: 700;
 }
 </style>
