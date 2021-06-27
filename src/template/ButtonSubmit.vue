@@ -1,14 +1,13 @@
 <template>
-    <button class="btn">
-      {{ tag }}
-    </button>
+  <button class="btn">
+    {{ tag }}
+  </button>
 </template>
 
 <script>
-  export default {
-    props: ['tag'],
-    
-  }
+export default {
+  props: ["tag"],
+};
 </script>
 
 <style scoped>
@@ -33,7 +32,6 @@
 
 .btn:active {
   background-color: #a8c0ff;
+  border: none;
 }
-
-
 </style>
