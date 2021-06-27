@@ -4,6 +4,7 @@
     <Convincing1 @callForm="openForm = $event" class="convincing-1" />
     <Convincing2 @callForm="openForm = $event" class="convincing-2 mt-10" />
     <Convincing3 @callForm="openForm = $event" class="convincing-3 mt-10" />
+    <Convincing4 @callForm="openForm = $event" class="convincing-4 mt-10" />
     <FormRegister @callForm="openForm = $event" id="form-transient"/>
     <Footer />
   </div>
@@ -14,6 +15,7 @@ import Header from "./template/Header";
 import Convincing1 from "./components/Convincing1";
 import Convincing2 from "./components/Convincing2";
 import Convincing3 from "./components/Convincing3";
+import Convincing4 from "./components/Convincing4";
 import FormRegister from "./components/FormRegister.vue";
 import Footer from "./template/Footer";
 
@@ -26,6 +28,7 @@ export default {
     Convincing1,
     Convincing2,
     Convincing3,
+    Convincing4,
   },
   data() {
     return {
@@ -46,8 +49,10 @@ export default {
     showForm(param){
       document.querySelector(`.convincing-${param}`).style["margin-left"] = `-${this.windownWidth}px`
       document.querySelector(`.close-form`).style.cursor = "pointer"
+      let that = this
       setTimeout(()=>{
-        document.querySelector(`#form-transient`).style.display = "block"
+        if(that.formOpen)
+          document.querySelector(`#form-transient`).style.display = "block"
       }, 1000)
       this.formOpen = true;
     },
@@ -55,7 +60,9 @@ export default {
       document.querySelector(`.convincing-1`).style["margin-left"] = "0"
       document.querySelector(`.convincing-2`).style["margin-left"] = "0"
       document.querySelector(`.convincing-3`).style["margin-left"] = "0"
+      document.querySelector(`.convincing-4`).style["margin-left"] = "0"
       document.querySelector(`.close-form`).style.cursor = "default"
+
       setTimeout(()=>{
         document.querySelector(`#form-transient`).style.display = "none"
       }, 400)
@@ -67,7 +74,6 @@ export default {
     let that = this
     this.windownWidth = document.querySelector("#app").offsetHeight - 100;
     document.querySelector("body").onscroll = function(){
-      console.log("fechar", that.formOpen)
       if(that.formOpen){
         that.closeForm()
       }
@@ -95,7 +101,8 @@ body {
 
 .convincing-1,
 .convincing-2,
-.convincing-3{
+.convincing-3,
+.convincing-4{
   border-radius: 8px;
   transition-duration: 2.5s;
 }

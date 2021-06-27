@@ -1,11 +1,9 @@
 <template>
   <div class="convincing">
     <div>
-      <h5>Compre nosso produto ?</h5>
+      <h5>Você considera as perdas em seus calculos ?</h5>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis natus
-        nobis vero fugit excepturi vel harum distinctio ratione error omnis
-        sequi maxime alias deleniti corporis, eius ducimus ipsum odio dolorum!
+        Através de nosso sofware as perdas podem ser consideradas desde o iníncio e no final do mês não terá surpresas a não ser as planejadas!
       </p>
       <span @click="openFormRegister(2)">
         <Button tag="Saiba Mais" />

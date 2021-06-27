@@ -1,8 +1,8 @@
 <template>
   <div class="form-register">
-    <h3 class="mt-1">Criar uma conta</h3>
+    <h3 class="mt-1">Entramos em contato com você!</h3>
     <span class="close" @click="closeRegister()">x</span>
-    <h6>Você já possui uma conta ?</h6>
+    <h6>Você já conhece nosso sistema ?</h6>
     <b-form @submit="onSubmit">
       <b-form-group
         class="mt-2"

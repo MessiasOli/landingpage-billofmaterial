@@ -2,11 +2,9 @@
     <div class="convincing">
       <img src="@/assets/controle.jpg" alt="Controle financeiro" />
       <div>
-        <h5>Compre nosso produto ?</h5>
+        <h4>Se uma grande demanda chegar, seu processo esta preparado ?</h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis natus
-          nobis vero fugit excepturi vel harum distinctio ratione error omnis
-          sequi maxime alias deleniti corporis, eius ducimus ipsum odio dolorum!
+          Com o sistema <strong>Produção e Planejamento</strong> você pode adequar seu processo para atender grandes demandas e a mudanças brusca na demanda, sem se preocupar se vai faltar algo para completar o mês.
         </p>
         <span @click="openFormRegister(1)">
           <Button tag="Saiba Mais" />
@@ -29,6 +27,9 @@ export default {
 </script>
 
 <style scoped>
+h4{
+  font-weight: 500;
+}
 .convincing {
   background-color: #abd2fa;
   width: 100%;

@@ -28,6 +28,8 @@ export default {
   box-shadow: 2px 2px 2px #a8c0ff;
   color: white;
   transition-duration: 150ms;
+  background-color: rebeccapurple;
+
 }
 
 .btn:active {

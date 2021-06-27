@@ -2,11 +2,9 @@
   <div class="convincing">
     <img src="@/assets/fluxograma.jpg" alt="Controle financeiro" />
     <div>
-      <h5>Compre nosso produto ?</h5>
+      <h5>Seus preços são justos ?</h5>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis natus
-        nobis vero fugit excepturi vel harum distinctio ratione error omnis
-        sequi maxime alias deleniti corporis, eius ducimus ipsum odio dolorum!
+        Faça um planejamento agora mesmo e descubra quanto deveria gastar por processos...
       </p>
       <span @click="openFormRegister(3)">
         <Button tag="Saiba Mais" />
